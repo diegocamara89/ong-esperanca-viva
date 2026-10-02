@@ -111,6 +111,7 @@ input, select, textarea {
 
 /* Footer */
 .site-footer { background: var(--blue-dark); color: #cbd2d9; padding: 1.5rem 0; text-align: center; }
+.site-footer a { color: #fff; }
 
 @media (max-width: 600px) {
   .hero { padding: 3rem 0; }

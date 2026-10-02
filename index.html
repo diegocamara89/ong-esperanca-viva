@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esperança Viva – ONG de educação e inclusão digital</title>
+  <meta name="description" content="A Esperança Viva leva educação e inclusão digital a jovens de comunidades periféricas. Conheça nossos projetos, seja voluntário ou doe." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#inicio">Esperança <span>Viva</span></a>
+      <nav aria-label="Principal">
+        <ul class="nav-list">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#impacto">Impacto</a></li>
+          <li><a href="#voluntario">Seja voluntário</a></li>
+          <li><a class="btn btn-small" href="#doar">Doe agora</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container">
+        <h1>Tecnologia e educação que transformam o futuro de jovens</h1>
+        <p class="lead">Somos uma organização da sociedade civil que oferece cursos gratuitos de informática, reforço escolar e orientação profissional em comunidades de baixa renda.</p>
+        <p><a class="btn" href="#voluntario">Quero ser voluntário</a> <a class="btn btn-outline" href="#projetos">Conheça os projetos</a></p>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container">
+        <h2>Quem somos</h2>
+        <p>Desde 2014, a Esperança Viva acredita que acesso ao conhecimento muda trajetórias. Reunimos educadores, profissionais de tecnologia e voluntários para criar oportunidades onde elas mais faltam.</p>
+        <div class="grid grid-3">
+          <article class="card"><h3>Missão</h3><p>Promover inclusão digital e educacional para jovens de 12 a 24 anos.</p></article>
+          <article class="card"><h3>Visão</h3><p>Ser referência nacional em educação comunitária mediada por tecnologia.</p></article>
+          <article class="card"><h3>Valores</h3><p>Transparência, respeito, colaboração e compromisso com resultados reais.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="section section-alt">
+      <div class="container">
+        <h2>Nossos projetos</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Código do Futuro</h3>
+            <p>Curso de lógica de programação e desenvolvimento web com turmas de até 20 alunos e mentoria individual.</p>
+          </article>
+          <article class="card">
+            <h3>Reforço Conectado</h3>
+            <p>Aulas de reforço de matemática e português com apoio de plataformas digitais e voluntários.</p>
+          </article>
+          <article class="card">
+            <h3>Primeiro Emprego</h3>
+            <p>Oficinas de currículo, entrevista e parcerias com empresas para o primeiro emprego.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="impacto" class="section">
+      <div class="container">
+        <h2>Nosso impacto</h2>
+        <ul class="stats">
+          <li><strong>1.200+</strong> jovens atendidos</li>
+          <li><strong>85</strong> voluntários ativos</li>
+          <li><strong>12</strong> comunidades parceiras</li>
+          <li><strong>310</strong> jovens empregados</li>
+        </ul>
+        <p class="note">Os números acima são fictícios e usados apenas para fins educacionais.</p>
+      </div>
+    </section>
+
+    <section id="voluntario" class="section section-alt">
+      <div class="container narrow">
+        <h2>Seja voluntário</h2>
+        <p>Preencha o formulário e nossa equipe entrará em contato.</p>
+        <form id="form-voluntario" novalidate>
+          <div class="field">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="area">Área de interesse</label>
+            <select id="area" name="area" required>
+              <option value="">Selecione</option>
+              <option>Ensino de programação</option>
+              <option>Reforço escolar</option>
+              <option>Orientação profissional</option>
+              <option>Comunicação e eventos</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="mensagem">Mensagem (opcional)</label>
+            <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar inscrição</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="doar" class="section">
+      <div class="container narrow">
+        <h2>Doe e transforme vidas</h2>
+        <p>Sua doação financia materiais, equipamentos e bolsas de transporte. Esta página é uma demonstração: nenhum pagamento real é processado.</p>
+        <p><a class="btn" href="#voluntario">Quero apoiar</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 ONG Esperança Viva (projeto fictício). Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

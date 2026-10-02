@@ -88,6 +88,8 @@ h3 { margin-top: 0; color: var(--blue-dark); }
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .card { background: #fff; padding: 1.5rem; border-radius: var(--radius); box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08); }
 
+.foto { width: 100%; height: auto; border-radius: var(--radius); margin-top: 1.5rem; display: block; }
+
 /* Stats */
 .stats { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; }
 .stats li { background: var(--bg-alt); border-radius: var(--radius); padding: 1.5rem; text-align: center; }

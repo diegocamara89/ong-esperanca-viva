@@ -1,0 +1,17 @@
+{
+  "name": "ong-esperanca-viva",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Site institucional da ONG fictícia Esperança Viva, desenvolvido na Experiência Prática IV de Desenvolvimento Front-end.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "Marcelo Diego Sousa da Camara",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.4.21"
+  }
+}

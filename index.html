@@ -16,13 +16,25 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="#inicio">Esperança <span>Viva</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
       <nav aria-label="Principal">
-        <ul class="nav-list">
+        <ul class="nav-list" id="menu-principal">
           <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#projetos">Projetos</a></li>
+          <li class="has-sub">
+            <a href="#projetos">Projetos</a>
+            <button class="sub-toggle" type="button" aria-expanded="false" aria-label="Mostrar lista de projetos">&#9662;</button>
+            <ul class="submenu">
+              <li><a href="#projetos">Código do Futuro</a></li>
+              <li><a href="#projetos">Reforço Conectado</a></li>
+              <li><a href="#projetos">Primeiro Emprego</a></li>
+              <li><a href="#projetos">Mulheres na Tecnologia</a></li>
+            </ul>
+          </li>
           <li><a href="#impacto">Impacto</a></li>
           <li><a href="#voluntario">Seja voluntário</a></li>
-          <li><a class="btn btn-small" href="#doar">Doe agora</a></li>
+          <li><a class="btn btn-small" href="#doar" data-open-modal>Doe agora</a></li>
         </ul>
       </nav>
     </div>
@@ -45,10 +57,10 @@
           <source type="image/webp" srcset="img/turma-480.webp 480w, img/turma-800.webp 800w, img/turma-1200.webp 1200w" sizes="(min-width: 1100px) 1100px, 92vw" />
           <img class="foto" src="img/turma-800.jpg" srcset="img/turma-480.jpg 480w, img/turma-800.jpg 800w, img/turma-1200.jpg 1200w" sizes="(min-width: 1100px) 1100px, 92vw" width="1200" height="675" loading="lazy" decoding="async" alt="Ilustração de jovens reunidos diante de uma tela com código em uma aula de programação" />
         </picture>
-        <div class="grid grid-3">
-          <article class="card"><h3>Missão</h3><p>Promover inclusão digital e educacional para jovens de 12 a 24 anos.</p></article>
-          <article class="card"><h3>Visão</h3><p>Ser referência nacional em educação comunitária mediada por tecnologia.</p></article>
-          <article class="card"><h3>Valores</h3><p>Transparência, respeito, colaboração e compromisso com resultados reais.</p></article>
+        <div class="grid-12">
+          <article class="card col-12 col-md-4"><h3>Missão</h3><p>Promover inclusão digital e educacional para jovens de 12 a 24 anos.</p></article>
+          <article class="card col-12 col-md-4"><h3>Visão</h3><p>Ser referência nacional em educação comunitária mediada por tecnologia.</p></article>
+          <article class="card col-12 col-md-4"><h3>Valores</h3><p>Transparência, respeito, colaboração e compromisso com resultados reais.</p></article>
         </div>
       </div>
     </section>
@@ -56,18 +68,30 @@
     <section id="projetos" class="section section-alt">
       <div class="container">
         <h2>Nossos projetos</h2>
-        <div class="grid grid-3">
-          <article class="card">
+        <div class="grid-12">
+          <article class="card col-12 col-sm-6 col-lg-3">
+            <span class="badge badge-success">Vagas abertas</span>
             <h3>Código do Futuro</h3>
             <p>Curso de lógica de programação e desenvolvimento web com turmas de até 20 alunos e mentoria individual.</p>
+            <a class="card-link" href="#voluntario">Quero participar<span class="sr-only"> do Código do Futuro</span></a>
           </article>
-          <article class="card">
+          <article class="card col-12 col-sm-6 col-lg-3">
+            <span class="badge badge-warning">Lista de espera</span>
             <h3>Reforço Conectado</h3>
             <p>Aulas de reforço de matemática e português com apoio de plataformas digitais e voluntários.</p>
+            <a class="card-link" href="#voluntario">Entrar na lista<span class="sr-only"> do Reforço Conectado</span></a>
           </article>
-          <article class="card">
+          <article class="card col-12 col-sm-6 col-lg-3">
+            <span class="badge badge-danger">Inscrições encerradas</span>
             <h3>Primeiro Emprego</h3>
             <p>Oficinas de currículo, entrevista e parcerias com empresas para o primeiro emprego.</p>
+            <a class="card-link" href="#voluntario">Apoiar o projeto<span class="sr-only"> Primeiro Emprego</span></a>
+          </article>
+          <article class="card col-12 col-sm-6 col-lg-3">
+            <span class="badge badge-info">Em breve</span>
+            <h3>Mulheres na Tecnologia</h3>
+            <p>Trilha de formação e mentoria para jovens mulheres interessadas em carreiras de tecnologia.</p>
+            <a class="card-link" href="#voluntario">Quero ser mentora<span class="sr-only"> em Mulheres na Tecnologia</span></a>
           </article>
         </div>
       </div>
@@ -76,13 +100,16 @@
     <section id="impacto" class="section">
       <div class="container">
         <h2>Nosso impacto</h2>
-        <ul class="stats">
-          <li><strong>1.200+</strong> jovens atendidos</li>
-          <li><strong>85</strong> voluntários ativos</li>
-          <li><strong>12</strong> comunidades parceiras</li>
-          <li><strong>310</strong> jovens empregados</li>
+        <ul class="stats grid-12">
+          <li class="col-6 col-md-3"><strong>1.200+</strong> jovens atendidos</li>
+          <li class="col-6 col-md-3"><strong>85</strong> voluntários ativos</li>
+          <li class="col-6 col-md-3"><strong>12</strong> comunidades parceiras</li>
+          <li class="col-6 col-md-3"><strong>310</strong> jovens empregados</li>
         </ul>
-        <p class="note">Os números acima são fictícios e usados apenas para fins educacionais.</p>
+        <div class="alert alert-warning" role="note">
+          <span class="alert-icon" aria-hidden="true">!</span>
+          <p><strong>Atenção</strong>Os números acima são fictícios e usados apenas para fins educacionais.</p>
+        </div>
       </div>
     </section>
 
@@ -90,6 +117,7 @@
       <div class="container narrow">
         <h2>Seja voluntário</h2>
         <p>Preencha o formulário e nossa equipe entrará em contato. Campos marcados com <span class="req" aria-hidden="true">*</span><span class="sr-only">asterisco</span> são obrigatórios.</p>
+        <div id="form-resumo" role="alert"></div>
         <form id="form-voluntario" novalidate>
           <div class="field">
             <label for="nome">Nome completo <span class="req" aria-hidden="true">*</span></label>
@@ -115,15 +143,18 @@
           </div>
           <button type="submit" class="btn">Enviar inscrição</button>
         </form>
-        <div id="form-status" role="status"></div>
       </div>
     </section>
 
     <section id="doar" class="section">
       <div class="container narrow">
         <h2>Doe e transforme vidas</h2>
-        <p>Sua doação financia materiais, equipamentos e bolsas de transporte. Esta página é uma demonstração: nenhum pagamento real é processado.</p>
-        <p><a class="btn" href="#voluntario">Quero apoiar</a></p>
+        <p>Sua doação financia materiais, equipamentos e bolsas de transporte.</p>
+        <div class="alert alert-info" role="note">
+          <span class="alert-icon" aria-hidden="true">i</span>
+          <p><strong>Demonstração</strong>Esta página é uma demonstração: nenhum pagamento real é processado.</p>
+        </div>
+        <p><a class="btn" href="#doar" data-open-modal>Quero apoiar</a></p>
       </div>
     </section>
   </main>
@@ -134,6 +165,21 @@
       <p>&copy; 2026 ONG Esperança Viva (projeto fictício). Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <dialog id="modal-doacao" class="modal" aria-labelledby="modal-titulo">
+    <button class="modal-close" type="button" data-close-modal aria-label="Fechar janela">&times;</button>
+    <h2 id="modal-titulo">Obrigado por querer apoiar!</h2>
+    <p>Com R$ 50 você ajuda a manter um jovem por um mês em nossos cursos de tecnologia.</p>
+    <div class="alert alert-info" role="note">
+      <span class="alert-icon" aria-hidden="true">i</span>
+      <p><strong>Demonstração</strong>Nenhum pagamento real é processado neste projeto.</p>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-small" type="button" data-close-modal>Entendi</button>
+    </div>
+  </dialog>
+
+  <div class="toast-area" id="toasts" aria-live="polite"></div>
 
   <script type="module" src="./src/js/main.js"></script>
 </body>

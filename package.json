@@ -1,6 +1,6 @@
 {
   "name": "ong-esperanca-viva",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "description": "Site institucional da ONG fictícia Esperança Viva, desenvolvido na Experiência Prática IV de Desenvolvimento Front-end.",
   "type": "module",

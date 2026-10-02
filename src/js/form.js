@@ -9,9 +9,12 @@ export function validarFormulario(form) {
   ['nome', 'email', 'area'].forEach((id) => {
     const campo = form.querySelector(`#${id}`);
     const ok = campo.value.trim() !== '' && campo.checkValidity();
+    campo.setAttribute('aria-invalid', ok ? 'false' : 'true');
     mostrarErro(campo, ok ? '' : mensagens[id]);
     if (!ok) valido = false;
   });
+  const primeiroInvalido = form.querySelector('[aria-invalid="true"]');
+  if (primeiroInvalido) primeiroInvalido.focus();
   return valido;
 }
 
@@ -20,6 +23,9 @@ function mostrarErro(campo, texto) {
   if (!erro) {
     erro = document.createElement('span');
     erro.className = 'field-error';
+    erro.id = `erro-${campo.id}`;
+    erro.setAttribute('role', 'alert');
+    campo.setAttribute('aria-describedby', erro.id);
     campo.parentElement.append(erro);
   }
   erro.textContent = texto;

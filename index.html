@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/src/css/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="#inicio">Esperança <span>Viva</span></a>
@@ -24,7 +25,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="conteudo" tabindex="-1">
     <section id="inicio" class="hero">
       <div class="container">
         <h1>Tecnologia e educação que transformam o futuro de jovens</h1>
@@ -81,19 +82,19 @@
     <section id="voluntario" class="section section-alt">
       <div class="container narrow">
         <h2>Seja voluntário</h2>
-        <p>Preencha o formulário e nossa equipe entrará em contato.</p>
+        <p>Preencha o formulário e nossa equipe entrará em contato. Campos marcados com <span class="req" aria-hidden="true">*</span><span class="sr-only">asterisco</span> são obrigatórios.</p>
         <form id="form-voluntario" novalidate>
           <div class="field">
-            <label for="nome">Nome completo</label>
-            <input type="text" id="nome" name="nome" required autocomplete="name" />
+            <label for="nome">Nome completo <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="nome" name="nome" required aria-required="true" autocomplete="name" />
           </div>
           <div class="field">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required autocomplete="email" />
+            <label for="email">E-mail <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" />
           </div>
           <div class="field">
-            <label for="area">Área de interesse</label>
-            <select id="area" name="area" required>
+            <label for="area">Área de interesse <span class="req" aria-hidden="true">*</span></label>
+            <select id="area" name="area" required aria-required="true">
               <option value="">Selecione</option>
               <option>Ensino de programação</option>
               <option>Reforço escolar</option>
@@ -107,6 +108,7 @@
           </div>
           <button type="submit" class="btn">Enviar inscrição</button>
         </form>
+        <div id="form-status" role="status"></div>
       </div>
     </section>
 
